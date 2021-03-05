@@ -23,6 +23,7 @@ q-page.page-profile(padding)
     .profile-active-pane.q-mx-sm
       q-card(flat).q-my-md
         q-card-section
+          q-btn.float-right(flat round icon="fas fa-times")
           .welcome-text.text-subtitle1 Welcome
           .propose-text.text-h3.text-bold How to Propose
           .tutorial-text.text-subtitle1.text-bold Tutorial
@@ -30,6 +31,44 @@ q-page.page-profile(padding)
       q-card(flat).q-my-md
         q-card-section.reserve-height
           .text-h5.text-bold.q-pa-md My open proposals
+          q-card.example-contribution
+            .row.q-py-md
+              .state-text.q-pa-sm voting
+              q-space
+              q-btn.q-mx-sm(flat round icon="fas fa-ellipsis-v")
+            q-card-section
+              .text-subtite1 CONTRIBUTION
+              p Bridge Contribution - Jan 1 - Jan 31 2020 - Development Light ...
+              .text-caption Sponsored by:
+              q-separator(spaced inset)
+              .row.items-center
+                q-avatar.q-ma-sm(size="lg")
+                  img(src="~assets/avatar-placeholder.png")
+                .sponsor-details
+                  .text-body2.text-bold Member 2
+                  .text-caption 10000 HVoice
+                  .text-caption 1000 Hypha Token
+              q-separator(spaced inset)
+              .text-body1.text-bold Vote ends in 3 days
+              .vote-tally.q-pa-md
+                .text-caption.text-tiny votes endorsed by HVoice
+                q-linear-progress(:value="0.67" color="green" track-color="red" size="8px")
+                .text-caption.text-tiny Hell Yea: 45% Yes: 15% Abstain: 5% No: 10% Hell No: 10%
+              .text-body1.text-bold More info
+              .row.items-center
+                q-icon.q-ma-xs(name="far fa-circle" size="10px")
+                .text-caption 70% quorum (HVoice)
+              .row.items-center
+                q-icon.q-ma-xs(name="fas fa-caret-down" size="10px")
+                .text-caption 80% votes in favor (Yes or Hell Yea)
+            q-card-actions(align="around")
+              q-btn(flat round)
+                q-icon(name="fas fa-heart")
+                .q-pl-xs 23
+              q-btn(flat round)
+                q-icon(name="fas fa-comment")
+                .q-pl-xs 1
+              q-btn(flat round icon="fas fa-share-alt")
       q-card(flat).q-my-md
         q-card-section.reserve-height
           .text-h5.text-bold.q-pa-md My active assignments
@@ -139,6 +178,15 @@ q-page.page-profile(padding)
 
     .reserve-height
       min-height 450px
+
+    .example-contribution
+      max-width 300px
+
+      .state-text
+        background-color #F4E3B3
+
+      .text-tiny
+        font-size 8px
 
   .profile-past-pane
     max-width 400px
