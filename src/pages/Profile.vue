@@ -2,7 +2,7 @@
 export default {
   name: 'page-profile',
   components: {
-    PersonalInfo: () => import('../components/personal-info-widget.vue')
+    PersonalInfo: () => import('../components/profile-personal-info.vue')
   },
   data () {
     return {

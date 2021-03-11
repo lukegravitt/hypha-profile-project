@@ -1,11 +1,11 @@
 <script>
 export default {
-  name: 'personal-info-widget'
+  name: 'profile-personal-info'
 }
 </script>
 
 <template lang="pug">
-q-card(flat).personal-info-widget
+q-card(flat).profile-personal-info
   q-avatar.avatar-large(size="320px")
     img(src="~assets/avatar-placeholder.png")
   .profile-header.text-center.text-bold
@@ -41,7 +41,7 @@ q-card(flat).personal-info-widget
 </template>
 
 <style lang="stylus" scoped>
-.personal-info-widget
+.profile-personal-info
   padding-bottom 16px
   max-width 400px
 
